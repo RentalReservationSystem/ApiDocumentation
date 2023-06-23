@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <title>Api Documentation</title>
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2 d-none d-md-block">
+                <img src="pictures/logo.png" alt="logo">
+            </div>
+            <div class="col-10 col-sm-12 col-md-10">
+                <p>Api Documention</p>
+            </div>
+        </div>
+        <div class="container-sm">
+            <h1><b>Welcome to the Rent/Send API Documentation!</b> </h1>
+
+            <p>The <b>Rent/Send API</b> is a powerful tool that allows developers to integrate the functionality of renting rooms, sending money, and managing user information seamlessly into their applications. Whether you're building a financial app, a room-sharing platform, or any other service that requires secure and efficient room rental, money transfer, user management, and eLoad capabilities, our API has you covered.
+                Our API offers a comprehensive set of endpoints and resources that enable you to interact with the Rent/Send system programmatically. With just a few simple requests, you can access features like room search, booking management, payment processing, user information updates, and eLoad transactions, all while ensuring the privacy and security of your users' data.</p>
+            <img src="pictures/OAuth2.png" alt="">
+            <p><b>Key Features:</b> </p> 
+            <ul>
+                <li>Room Rental: Search for available rooms, retrieve room details, and manage bookings effortlessly.</li>
+                <li>Money Transfer: Facilitate secure and fast money transfers between users, streamlining the payment process.</li>
+                <li>User Management: Allow users to update their information, such as their first name and other relevant details, using their unique user ID.</li>
+                <li>eLoad System: Enable users to perform electronic load transactions, such as mobile phone top-ups and prepaid credits, seamlessly within your application.</li>
+            </ul>
+            
+            <p><b>Getting Started:</b></p>
+            <p>To start using the Rent/Send API, you'll need an API key, which you can obtain by signing up for an account on our developer portal. Once you have your API key, you can authenticate your requests by including it in the request headers.</p>    
+            
+            <p><b>API Resources:</b></p>
+            <p>Our API provides several resources that allow you to perform specific actions. These include:</p>
+            <ul>
+                <li>Rooms: Interact with room listings, availability, and booking information.</li>
+                <li>Users: Manage user profiles, authentication, and access control. Users can update their information using their unique user ID.</li>
+                <li>Payments: Handle payment processing and transactions securely.</li>
+                <li>Transfers: Initiate and track money transfers between users.</li>
+                <li>eLoad: Perform electronic load transactions, such as mobile phone top-ups and prepaid credits.</li>
+            </ul>
+
+            <p>Please refer to the API documentation for detailed information on endpoints, request/response formats, authentication methods, and example use cases. We also provide client libraries and code snippets in various programming languages to help you get started quickly.</p>
+
+            <p><b>Feature:</b></p>
+            <ul>
+            <li><p><b>Register</b></p></li>
+            <p><b>First, User must <b>register</b> through API Gateway</b></p>
+            <p>With required fields:</p>
+            <p>firstname, middlename, lastname, phone_number, address, email, and your password.</p>
+            <p>see <b>Picture</b> below:</p>
+            <a href="pictures/reggate.png">
+              <img src="pictures/reggate.png" alt="">
+            </a>
+
+            <br><br>
+            <p><b>Login</b></p>
+            <p>If user wants to access the microservices through api gateway, User must <b>login</b> first. User needs his/her email and password to generate an access_token.</p>
+            <a href="pictures/loggate.png">
+              <img src="pictures/loggate.png" alt="">
+            </a>
+
+            <br><br>
+            <p><b>Logout</b></p>
+            <p>User can also <b>logout</b> in gateway, if he/she wishes to logout.</p>
+            <a href="pictures/logogate.png">
+              <img src="pictures/logogate.png" alt="">
+            </a>
+            </ul>
+
+
+            <p><b>Microservices:</b></p>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item border">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      User System
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><p>User system provides a personalized and secure experience for users of the Rent/Send system. It allows users manage their accounts, update their information using their id and ensures that their interactions with the platform are seamless and tailored to their needs.</p>
+                        
+                        <p><b>Feature:</b></p>
+                        <p><b>Update information</b></p>
+                        <p>If id, firstname, and lastname is the same with user's details, the user can update his/her information.</p>
+                        <a href="pictures/upuser.png">
+                          <img src="pictures/upuser.png" alt="add">
+                        </a>
+                        <p>However, if id, firstname, and lastname is not the same with the user's details. This will be the result:</p>
+                        <a href="pictures/noupuser.png">
+                          <img src="pictures/noupuser.png" alt="">
+                        </a>
+                        <p><b>User can only update his/her information with his/her id. </b></p>
+                
+                
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item border">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Inventory System
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <p>The inventory system in the Rent/Send system is responsible for managing and tracking the availability and status of the rooms or items available for rent. It allows users to search for available rooms, view detailed information about them, and make bookings based on their preferences.</p>
+                        <p><b>Features:</b></p>
+                        <p>User can search a house by category. Picture Below is an example:</p>
+                        <a href="pictures/searchcat.png">
+                          <img src="pictures/searchcat.png" alt="">
+                        </a>
+                        <p>User can search a house by price(pricebelow). Picture Below is an example:</p>
+                        <a href="pictures/searchprice.png">
+                          <img src="pictures/searchprice.png" alt="">
+                        </a>
+                        <p><b>Other Features:</b></p>
+                        <p>Get all products(Houses):</p>
+                        <a href="">
+                          <img src="pictures/allpro.png" alt="">
+                        </a>
+                        <p>Get by productid:</p>
+                        <a href="pictures/proid.png">
+                          <img src="pictures/proid.png" alt="">
+                        </a>
+                        <p>Add:</p>
+                        <a href="pictures/addpro.png">
+                          <img src="pictures/addpro.png" alt="">
+                        </a>
+                        <p>Update:</p>
+                        <a href="pictures/uppro.png">
+                          <img src="pictures/uppro.png" alt="">
+                        </a>
+                        <!-- <p>Delete:</p>
+                        <img src="pictures/delhouse.png" alt=""> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item border">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      Payment System
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <p>The Payment system in the Rent/Send system is responsible for handling secure and convenient transactions between users, facilitating the collection of rental fees, and providing a refund feature for cancellations or other eligible cases.</p>
+                        <p><b>Features:</b></p>
+                        <p>If there is transactionid, the refund will be successful</p>
+                        <p><b>Refund:</b></p>
+                        <a href="pictures/refsuc.png">
+                        <img src="pictures/refsuc.png" alt="">
+                        </a>
+                        <p>However, if there is no transactionid from user's input:</p>
+                        <a href="pictures/referr.png">
+                        <img src="pictures/referr.png" alt="">
+                        </a>
+                        <!-- <p>Mode of Payments</p>
+                        <img src="pictures/mop.png" alt=""> -->
+
+                        <p><b>Other Features:</b></p>
+                        <p>Get all transactions:</p>
+                        <a href="pictures/alltrans.png">
+                        <img src="pictures/alltrans.png" alt="">
+                        </a>
+                        <p>Get by transactionid:</p>
+                        <a href="pictures/gettransid.png">
+                        <img src="pictures/gettransid.png" alt="">
+                        </a>
+                        <p>Add:</p>
+                        <a href="pictures/addtrans.png">
+                        <img src="pictures/addtrans.png" alt="">
+                        </a>
+                        <p>Update:</p>
+                        <a href="pictures/updatetrans.png">
+                        <img src="pictures/updatetrans.png" alt="">
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item border">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                      eLoad System
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <p>The eLoad system in the Ren\Send system is a feature that allows users to perform electronic load transactions within your application. Electronic load, commonly referred to as eLoad, enables users to top up their mobile phones or purchase prepaid credits conveniently and securely.</p>
+                        <p><b>Features:</b></p>
+                        <p>User can buy load instantly.</p>
+                        <a href="pictures/addload.png">
+                          <img src="pictures/addload.png" alt="">
+                        </a>
+                        <!-- <p>Mode of Payments</p>
+                        <img src="pictures/mop.png" alt=""> -->
+
+                        <p><b>Other Features:</b></p>
+                        <p>Get all loads:</p>
+                        <a href="pictures/allloads.png">
+                          <img src="pictures/allloads.png" alt="">
+                        </a>
+                        <p>Get load by loadid:</p>
+                        <a href="pictures/loadid.png">
+                          <img src="pictures/loadid.png" alt="">
+                        </a>
+                    </div>
+                  </div>
+                </div>                
+              </div>
+        </div>
+        <br>
+        <p style="width: 100%; display: flex; justify-content: center;">&copy; Team More | 2023</p>
+    </div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+</body>
+</html>

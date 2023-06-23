@@ -1,0 +1,30 @@
+.row>.col-2 img{
+    width: 100%;
+}
+.row>.col-10 p{
+    height: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.container-sm{
+    margin-top: 20px;
+}
+.container-sm h1>b{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 30px;
+
+}
+.accordion img{
+    width: 100%;
+}
+
+.container-sm a img{
+    width: 100%;
+}
+.container-sm img{
+    width: 100%;
+}
